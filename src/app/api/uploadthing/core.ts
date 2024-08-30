@@ -40,9 +40,8 @@ export const ourFileRouter = {
                 croppedImageUrl: file.url, 
               }
             })
+            return {configId: updatedConfiguration.id}
         }
-
-        return { configId }
     }),
 } satisfies FileRouter;
  
