@@ -17,13 +17,13 @@ const Page = async ({ searchParams }: PageProps) => {
 
   const configuration = await db.configuration.findUnique({
     where: { id },
-  })
+  });
 
   if (!configuration) {
     return notFound();
   }
 
-  return <DesignPreview configuration={configuration} />
+  return <DesignPreview configuration={configuration} />;
 };
 
 export default Page;
